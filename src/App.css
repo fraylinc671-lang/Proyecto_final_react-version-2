@@ -1,0 +1,207 @@
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #171c26;
+  border-bottom: 1px solid #262d3a;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #a9b4c4;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.nav-link:hover {
+  background-color: #262d3a;
+}
+
+/* Clase que NavLink aplica solo a la ruta activa */
+.nav-link.activo {
+  background-color: #2f6fed;
+  color: white;
+}
+
+/* ===== Layout general ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 32px 60px;
+}
+
+.page h1 {
+  margin-bottom: 20px;
+}
+
+/* ===== Búsqueda ===== */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #2c3444;
+  background-color: #171c26;
+  color: #e8ecf1;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.resultado-contador {
+  color: #8892a3;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+/* ===== Grid de países ===== */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.country-card {
+  background-color: #171c26;
+  border: 1px solid #262d3a;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.country-card-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 14px;
+  display: block;
+}
+
+.country-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.country-card h3 {
+  margin: 0 0 6px;
+}
+
+.country-card p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color: #a9b4c4;
+}
+
+/* ===== Botón favorito ===== */
+.favorite-btn {
+  margin: 0 14px 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #2c3444;
+  background-color: transparent;
+  color: #e8ecf1;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.15s;
+}
+
+.favorite-btn:hover {
+  background-color: #262d3a;
+}
+
+.favorite-btn.activo {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  color: #10141c;
+  font-weight: 600;
+}
+
+/* ===== Detalle de país ===== */
+.volver-link {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.detalle-pais {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: #171c26;
+  border: 1px solid #262d3a;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.detalle-pais img {
+  width: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.detalle-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.detalle-info p {
+  margin: 8px 0;
+}
+
+/* ===== Loader / Error ===== */
+.loader {
+  text-align: center;
+  padding: 40px;
+  color: #8892a3;
+}
+
+.loader-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #2c3444;
+  border-top-color: #2f6fed;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  background-color: #2a1414;
+  border: 1px solid #5c2323;
+  color: #ff9b9b;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.vacio-mensaje {
+  color: #8892a3;
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #2f6fed;
+}
