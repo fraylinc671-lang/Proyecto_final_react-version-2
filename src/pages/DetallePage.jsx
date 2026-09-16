@@ -8,7 +8,7 @@ import { formatearNumero } from '../utils/format';
 function DetallePage() {
   const { codigo } = useParams();
 
-  const url = `https://www.apicountries.com/alpha/${codigo}`;
+  const url = `https://countries.dev/alpha/${codigo}`;
   // Primero tenia una api que devolvia un array, pero esa api por alguna razon no funciono luego de intentar de todo asi que coloque esta que devuelve un objeto
   const { datos: pais, cargando, error } = useFetch(url);
 

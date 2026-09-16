@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
 
-const API_URL = 'https://www.apicountries.com/countries';
+const API_URL = 'https://countries.dev/countries';
 
 function InicioPage() {
   // Usefetch que se dispara una vez al montar la web 
